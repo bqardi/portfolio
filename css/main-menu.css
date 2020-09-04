@@ -30,8 +30,8 @@
 }
 
 .menu__logo {
-    font-size: 1.7em;
-    font-weight: 800;
+    font-size: 2em;
+    font-weight: 400;
     margin-right: 0;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 440px;
+    max-width: 360px;
 }
 
 .menu__link {
