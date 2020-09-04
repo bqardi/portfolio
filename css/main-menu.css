@@ -1,11 +1,11 @@
 /* #region HEADER MENU */
 
 .menu {
-    --menu-link-color: white;
-    --menu-link-hover-color: crimson;
+    --menu-link-color: hsl(0, 0%, 89%);
+    --menu-link-hover-color: hsl(207, 100%, 73%);
     --menu-padding: 30px;
     --menu-background-color: hsl(0, 0%, 25%);
-    --menu-background-hover-color: crimson;
+    --menu-background-hover-color: hsl(207, 100%, 36%);
     position: relative;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 320px;
+    max-width: 440px;
 }
 
 .menu__link {
@@ -75,6 +75,10 @@
 .menu__link:hover {
     color: var(--menu-link-hover-color);
     text-decoration: underline;
+}
+
+.menu__link:hover .link__icon {
+    fill: var(--menu-link-hover-color);
 }
 
 .link__icon {
@@ -148,7 +152,10 @@
     .menu__link:hover {
         text-decoration: none;
         color: var(--menu-link-color);
-        background-color: var(--menu-link-hover-color);
+        background-color: var(--menu-background-hover-color);
+    }
+    .menu__link:hover .link__icon {
+        fill: var(--menu-link-color);
     }
     .menu__burger {
         display: flex;
