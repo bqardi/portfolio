@@ -47,7 +47,7 @@ body {
 }
 
 .keyWords {
-    padding: 0 var(--main-padding);
+    padding: 2em var(--main-padding) 3em;
 }
 
 .keyWords__title {
