@@ -25,7 +25,7 @@ function card() {
         text: "Et lille projekt hvor vi fik til opgave at lave et login eksempel, udfra et design givet til os i Adobe XD format.",
         gitHubLink: "https://github.com/bqardi/login-example/",
         siteLink: "https://bqardi.github.io/login-example/",
-        keyWords: ["Skole projekt", "Mobil venlig"]
+        keyWords: ["GitHub", "Skole projekt", "Mobil venlig"]
     }, {
         imageSrc: "./images/rogue-survivor.jpg",
         imageAlt: "Rogue Survivor",
@@ -34,7 +34,7 @@ function card() {
         text: "Et større projekt jeg har haft gang i, i et stykke tid nu. Det er et turbaseret eventyrspil, hvor du kan udføre quests, kæmpe mod monstre og udvikle din karakters spells og styrke ved hjælp af indsamlede ædelstene. Der kan også indsamles diverse andre objekter, som våben, armor, nøgler og health-potions.",
         gitHubLink: "https://github.com/bqardi/rogue-survivor/",
         siteLink: "https://bqardi.github.io/rogue-survivor/",
-        keyWords: ["Privat projekt", "Spil", "Sjov"]
+        keyWords: ["GitHub", "Privat projekt", "Spil", "Sjov"]
     }, {
         imageSrc: "./images/kryds-og-bolle.jpg",
         imageAlt: "Kryds og bolle",
@@ -43,7 +43,7 @@ function card() {
         text: "Et lille spil jeg lavede til min 7 årige søn, fordi han fandt ud af at han kunne finde ud af at spille det og fandt det sjovt.",
         gitHubLink: "https://github.com/bqardi/kryds-og-bolle",
         siteLink: "https://bqardi.github.io/kryds-og-bolle/",
-        keyWords: ["Privat projekt", "Spil", "Sjov", "Mobil venlig"]
+        keyWords: ["GitHub", "Privat projekt", "Spil", "Sjov", "Mobil venlig"]
     }, {
         imageSrc: "./images/cph-architects.jpg",
         imageAlt: "CPH Architects",
@@ -52,7 +52,7 @@ function card() {
         text: "Et projekt fokuseret på HTML, CSS, JavaScript, responsiveness og komponenter.",
         gitHubLink: "https://github.com/bqardi/cph-architects",
         siteLink: "https://bqardi.github.io/cph-architects/",
-        keyWords: ["Skole projekt", "Mobil venlig"]
+        keyWords: ["GitHub", "Skole projekt", "Mobil venlig"]
     }, {
         imageSrc: "./images/professor.jpg",
         imageAlt: "Professor terning",
@@ -61,7 +61,7 @@ function card() {
         text: "Hvordan man løser en Rubiks Cube/professor terning. En begynder metode til at løse en professor terning/Rubiks Cube på, med udførlige trin for trin forklaringer.",
         gitHubLink: "https://github.com/bqardi/professor",
         siteLink: "https://bqardi.github.io/professor/",
-        keyWords: ["Skole projekt", "Tutorial", "Sjov", "Mobil venlig"]
+        keyWords: ["GitHub", "Skole projekt", "Tutorial", "Sjov", "Mobil venlig"]
     }, {
         imageSrc: "./images/quiz.jpg",
         imageAlt: "Quiz",
@@ -70,7 +70,7 @@ function card() {
         text: "En sjov lille quiz hvor du kan teste dit kendskab til sjov, irrelevant viden.",
         gitHubLink: "https://github.com/bqardi/quiz-example",
         siteLink: "https://bqardi.github.io/quiz-example/",
-        keyWords: ["Skole projekt", "Sjov", "Mobil venlig"]
+        keyWords: ["GitHub", "Skole projekt", "Sjov", "Mobil venlig"]
     }, {
         imageSrc: "./images/object-builder.jpg",
         imageAlt: "Object builder",
