@@ -119,6 +119,14 @@ function card() {
         gitHubLink: "https://github.com/bqardi/projektopgave-uge-13",
         siteLink: "https://bqardi.github.io/projektopgave-uge-13/",
         keyWords: ["GitHub", "Skole projekt", "Mobil venlig"]
+    }, {
+        imageSrc: "./images/digital-media-eksamen-præsentation.jpg",
+        imagePlacement: "Center",
+        title: "Digital Media eksamen præsentation",
+        text: "Præsentation til eksamen for Digital Media Grundforløb 2, lavet i HTML, CSS, JavaScript.",
+        gitHubLink: "https://github.com/bqardi/digital-media-eksamen-pr-sentation",
+        siteLink: "https://bqardi.github.io/digital-media-eksamen-pr-sentation/",
+        keyWords: ["GitHub", "Skole projekt", "Mobil venlig"]
     }, ]
 
     let keyWords = [];
