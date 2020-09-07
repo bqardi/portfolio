@@ -94,6 +94,12 @@ body {
     border-bottom: var(--keyword-border-height) solid hsl(2, 82%, 30%);
 }
 
+.hero {}
+
+.heroVideo {
+    width: 100%;
+}
+
 @media only screen and (max-width: 400px) {
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, auto));
