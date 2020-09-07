@@ -1,7 +1,6 @@
 function card() {
     let cardDetails = [{
         imageSrc: "./images/svg-icon-list.jpg",
-        imageAlt: "SVG icon list",
         imagePlacement: "Top",
         title: "SVG icon list",
         text: "En kollektion af SVG ikoner, som kan sorteres/filtreres og med et enkelt klik på ikonet, kopieres til udklipsholderen.",
@@ -10,16 +9,14 @@ function card() {
         keyWords: ["Privat projekt", "Værktøjer", "Mobil venlig"]
     }, {
         imageSrc: "./images/workflow-helper.jpg",
-        imageAlt: "Workflow helper - Snippet generator for VSCode",
         imagePlacement: "Top",
         title: "Workflow helper",
-        text: "Et avanceret, men nemt at bruge -værktøj til at lave snippets til Visual Studio Code.",
+        text: "Et avanceret, men nemt at bruge -værktøj til at generere snippets til Visual Studio Code.",
         gitHubLink: "",
         siteLink: "https://bqardi.dk/workflow-helper/index.html",
         keyWords: ["Privat projekt", "Værktøjer"]
     }, {
         imageSrc: "./images/login-eksempel.jpg",
-        imageAlt: "Login eksempel",
         imagePlacement: "Top",
         title: "Login eksempel",
         text: "Et lille projekt hvor vi fik til opgave at lave et login eksempel, udfra et design givet til os i Adobe XD format.",
@@ -28,7 +25,6 @@ function card() {
         keyWords: ["GitHub", "Skole projekt", "Mobil venlig"]
     }, {
         imageSrc: "./images/rogue-survivor.jpg",
-        imageAlt: "Rogue Survivor",
         imagePlacement: "Center",
         title: "Rogue Survivor",
         text: "Et større projekt jeg har haft gang i, i et stykke tid nu. Det er et turbaseret eventyrspil, hvor du kan udføre quests, kæmpe mod monstre og udvikle din karakters spells og styrke ved hjælp af indsamlede ædelstene. Der kan også indsamles diverse andre objekter, som våben, armor, nøgler og health-potions.",
@@ -37,7 +33,6 @@ function card() {
         keyWords: ["GitHub", "Privat projekt", "Spil", "Sjov"]
     }, {
         imageSrc: "./images/kryds-og-bolle.jpg",
-        imageAlt: "Kryds og bolle",
         imagePlacement: "Top",
         title: "Kryds og bolle",
         text: "Et lille spil jeg lavede til min 7 årige søn, fordi han fandt ud af at han kunne finde ud af at spille det og fandt det sjovt.",
@@ -46,7 +41,6 @@ function card() {
         keyWords: ["GitHub", "Privat projekt", "Spil", "Sjov", "Mobil venlig"]
     }, {
         imageSrc: "./images/cph-architects.jpg",
-        imageAlt: "CPH Architects",
         imagePlacement: "Top",
         title: "CPH Architects",
         text: "Et projekt fokuseret på HTML, CSS, JavaScript, responsiveness og komponenter.",
@@ -55,7 +49,6 @@ function card() {
         keyWords: ["GitHub", "Skole projekt", "Mobil venlig"]
     }, {
         imageSrc: "./images/professor.jpg",
-        imageAlt: "Professor terning",
         imagePlacement: "Top",
         title: "Professor terning",
         text: "Hvordan man løser en Rubiks Cube/professor terning. En begynder metode til at løse en professor terning/Rubiks Cube på, med udførlige trin for trin forklaringer.",
@@ -64,7 +57,6 @@ function card() {
         keyWords: ["GitHub", "Skole projekt", "Tutorial", "Sjov", "Mobil venlig"]
     }, {
         imageSrc: "./images/quiz.jpg",
-        imageAlt: "Quiz",
         imagePlacement: "Top",
         title: "Quiz",
         text: "En sjov lille quiz hvor du kan teste dit kendskab til sjov, irrelevant viden.",
@@ -73,7 +65,6 @@ function card() {
         keyWords: ["GitHub", "Skole projekt", "Sjov", "Mobil venlig"]
     }, {
         imageSrc: "./images/object-builder.jpg",
-        imageAlt: "Object builder",
         imagePlacement: "Top",
         title: "Object builder",
         text: "Et værktøj der kan hjælpe med at lave JavaScript/JSON objekter med et visuelt \"node-system\". Peg og klik for at bygge dine \"nodes\", og kopiér til sidst den genererede kode.",
@@ -82,7 +73,6 @@ function card() {
         keyWords: ["Privat projekt", "Værktøjer", "Mobil venlig"]
     }, {
         imageSrc: "./images/space-invaders-clone.jpg",
-        imageAlt: "Space Invaders Clone",
         imagePlacement: "Top",
         title: "Space Invaders Clone",
         text: "Et lille Space Invaders klon spil, lavet i JavaScript med <a class=\"card__link\" href=\"https://svgjs.com/docs/3.0/\">svg.js</a> framework.",
@@ -91,7 +81,6 @@ function card() {
         keyWords: ["Skole projekt", "Spil", "Sjov"]
     }, {
         imageSrc: "./images/svg-mini-tutorial.jpg",
-        imageAlt: "SVG mini tutorial",
         imagePlacement: "Top",
         title: "SVG mini tutorial",
         text: "En kort og nem introduktion til SVG filer og brugen af dem.",
@@ -100,7 +89,6 @@ function card() {
         keyWords: ["Privat projekt", "Tutorial"]
     }, {
         imageSrc: "./images/lego-klods-major.jpg",
-        imageAlt: "Lego klods major",
         imagePlacement: "Center",
         title: "Lego klods major",
         text: "En lille video af nogle lego mænd der er temmelig klodsede. Et projekt jeg havde da jeg gik på Digital Media GF2. Legomændene er lavet i 3D programmet Maya",
@@ -109,13 +97,28 @@ function card() {
         keyWords: ["Skole projekt", "Sjov", "3D", "Video"]
     }, {
         imageSrc: "./images/lego-fun.jpg",
-        imageAlt: "Lego fun",
         imagePlacement: "Center",
         title: "Lego fun",
         text: "Et lille 3D program jeg har lavet i Unity hvor du kan bygge med legoklodser",
         gitHubLink: "",
         siteLink: "https://bqardi.dk/unity-games/lego-fun/index.html",
         keyWords: ["Skole projekt", "Sjov", "3D"]
+    }, {
+        imageSrc: "./images/star-wars-api.jpg",
+        imagePlacement: "Center",
+        title: "Star Wars API",
+        text: "Brug af fetch API'et til at hente et JSON objekt fra Star Wars API'et (<a class=\"card__link\" href=\"https://swapi.dev/\">https://swapi.dev/</a>) og manipulere DOM'en med disse data.<br><strong style=\"color:hsl(2, 82%, 40%);\">DER ER NOGET HELT GALT MED DENNE APP!!!</strong>",
+        gitHubLink: "https://github.com/bqardi/star-wars-api",
+        siteLink: "https://bqardi.github.io/star-wars-api/",
+        keyWords: ["GitHub", "Skole projekt"]
+    }, {
+        imageSrc: "./images/design-opgave.jpg",
+        imagePlacement: "Top",
+        title: "Design opgave",
+        text: "Et projekt fra skolen, hvor vi skulle lave et \"design\" website.",
+        gitHubLink: "https://github.com/bqardi/projektopgave-uge-13",
+        siteLink: "https://bqardi.github.io/projektopgave-uge-13/",
+        keyWords: ["GitHub", "Skole projekt", "Mobil venlig"]
     }, ]
 
     let keyWords = [];
