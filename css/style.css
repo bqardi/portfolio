@@ -1,5 +1,6 @@
 @import "./main-menu.css";
 @import "./card.css";
+@import "./footer.css";
 * {
     box-sizing: border-box;
     font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
@@ -23,6 +24,7 @@ body {
     align-items: center;
     width: 100%;
     background-color: hsl(0, 0%, 20%);
+    box-shadow: 0 5px 9px 0 hsla(0, 0%, 0%, 0.25);
 }
 
 .main {
@@ -62,21 +64,34 @@ body {
 }
 
 .keyWord {
+    --keyword-border-height: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     padding: 0 1em;
+    border-top: var(--keyword-border-height) solid transparent;
+    border-bottom: var(--keyword-border-height) solid transparent;
     font-weight: 500;
     text-decoration: none;
     color: hsl(0, 0%, 95%);
     background-color: hsl(0, 0%, 20%);
-    transition: background-color 150ms, color 150ms;
+    transition: background-color 150ms, color 150ms, border 150ms;
 }
 
 .keyWord:hover {
     color: hsl(0, 0%, 80%);
-    background-color: hsl(0, 0%, 25%);
+    background-color: hsl(2, 10%, 20%);
+}
+
+.keyWord.js-selected {
+    background-color: hsl(2, 10%, 20%);
+    border-bottom: var(--keyword-border-height) solid hsl(2, 82%, 40%);
+}
+
+.keyWord.js-selected:hover {
+    background-color: hsl(2, 30%, 20%);
+    border-bottom: var(--keyword-border-height) solid hsl(2, 82%, 30%);
 }
 
 @media only screen and (max-width: 400px) {

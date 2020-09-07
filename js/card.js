@@ -132,9 +132,12 @@ function card() {
         pushUnique(cardDetail.keyWords);
     });
 
-    keyWords.forEach(keyWord => {
+    keyWords.forEach((keyWord, index) => {
         let keyWordElement = document.createElement("A");
         keyWordElement.classList.add("keyWord");
+        if (index === 0) {
+            keyWordElement.classList.add("js-selected");
+        }
         keyWordElement.href = "#";
         keyWordElement.textContent = keyWord;
         keyWordContainer.appendChild(keyWordElement);
@@ -143,7 +146,14 @@ function card() {
     keyWordContainer.addEventListener("click", function(event) {
         if (event.target.classList.contains("keyWord")) {
             event.preventDefault();
+            for (let i = 0; i < keyWordContainer.children.length; i++) {
+                const keyWordBtn = keyWordContainer.children[i];
+                if (keyWordBtn.classList.contains("keyWord")) {
+                    keyWordBtn.classList.remove("js-selected");
+                }
+            }
             cardDetails.forEach(cardDetail => {
+                event.target.classList.add("js-selected");
                 if (event.target.textContent === "Vis alle" || cardDetail.keyWords.includes(event.target.textContent)) {
                     cardDetail.element.classList.remove("js-hidden");
                 } else {
