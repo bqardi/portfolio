@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 100%;
 }
 
 .menu--left {
@@ -118,7 +118,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        max-width: 300px;
+        max-width: 280px;
         flex-direction: column;
         background-color: var(--menu-background-color);
     }
@@ -167,15 +167,10 @@
 
 @media only screen and (max-width: 430px) {
     .menu__logo {
-        font-size: 1.2em;
-        font-weight: 700;
+        font-size: 1.8em;
     }
     .logo__image {
         height: 30px;
         margin-right: 10px;
-    }
-    .main-header {
-        height: 50px;
-        padding: 0 15px;
     }
 }
