@@ -59,7 +59,7 @@
 .menu__navigation {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     max-width: 360px;
 }
@@ -70,6 +70,7 @@
     align-items: center;
     color: var(--menu-link-color);
     text-decoration: none;
+    margin-left: 2em;
 }
 
 .menu__link:hover {
