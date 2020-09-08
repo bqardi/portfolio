@@ -185,6 +185,11 @@ function card() {
 
         clonedElement.querySelector(".goTo").href = cardDetail.siteLink;
 
+        let keyWordContainer = clonedElement.querySelector(".card__keyWords");
+        cardDetail.keyWords.forEach((keyWord, index) => {
+            keyWordContainer.innerHTML += index === 0 ? keyWord : "<span class=\"card__separator\"> | </span>" + keyWord;
+        });
+
         let gitHubLink = clonedElement.querySelector(".gitHub");
         if (cardDetail.gitHubLink === "") {
             gitHubLink.remove();

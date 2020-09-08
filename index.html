@@ -38,18 +38,25 @@
         </div>
     </header>
     <div class="hero">
-        <!-- <video autoplay muted loop id="myVideo" class="heroVideo">
+        <video autoplay muted loop class="heroVideo">
             <source src="./video/demo-reel.mp4" type="video/mp4">
-        </video> -->
-        <section class="description">
-            <h1 class="description__title">Mit arbejde</h1>
-            <p class="description__text">
-                Her er en samling af nogle af de ting jeg har lavet i løbet af min uddannelse på Roskilde Teknisk Skole som Web Udvikler. Det er hovedsageligt projekter jeg har "lagt ekstra kræfter i" og som jeg er stolt af at præsentere. Hvis du vil se "resten" kan
-                du gå ind på min <a class="mainFooter__link" href="https://github.com/bqardi">GitHub side</a> og finde alle repositories.
-            </p>
-        </section>
+        </video>
+        <div class="mainScrollTo">
+            <a class="mainScrollTo__link" href="#main" aria-label="Til indhold">
+                <svg class="mainScrollTo__icon" viewBox="0 0 24 24"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,10L12,16L18,10L16.6,8.6L12,13.2L7.4,8.6L6,10Z"></path></svg>
+            </a>
+        </div>
     </div>
     <main class="main">
+        <section id="main" class="description">
+            <div class="description__maxwidth">
+                <h1 class="description__title">Mit arbejde</h1>
+                <p class="description__text">
+                    Her er en samling af nogle af de ting jeg har lavet i løbet af min uddannelse på Roskilde Teknisk Skole som Web Udvikler. Det er hovedsageligt projekter jeg har "lagt ekstra kræfter i" og som jeg er stolt af at præsentere. Hvis du vil se "resten" kan
+                    du gå ind på min <a class="mainFooter__link" href="https://github.com/bqardi">GitHub side</a> og finde alle repositories.
+                </p>
+            </div>
+        </section>
         <section class="keyWords">
             <h2 class="keyWords__title">Sorter efter key-words:</h2>
             <div class="keyWordButtons">
@@ -143,6 +150,7 @@
                 <img class="header__image" src="JSContent" alt="JSContent">
             </header>
             <div class="card__content">
+                <span class="card__keyWords"></span>
                 <h2 class="content__title">JSContent</h2>
                 <p class="content__text">
                     JSContent
