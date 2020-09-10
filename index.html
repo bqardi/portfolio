@@ -38,7 +38,7 @@
         </div>
     </header>
     <div class="hero">
-        <video autoplay muted loop class="heroVideo">
+        <video autoplay loop class="heroVideo">
             <source src="./video/demo-reel.mp4" type="video/mp4">
         </video>
         <p class="hero__description">
@@ -161,8 +161,8 @@
                         <label class="settingsRow" for="settingsPlayVideo">Afspilning af video
                             <input type="checkbox" name="settingsPlayVideo" id="settingsPlayVideo" checked>
                         </label>
-                        <label class="settingsRow settingsVideoSoundLabel" for="settingsVideoSound">Lyd til video
-                            <input type="checkbox" name="settingsVideoSound" id="settingsVideoSound">
+                        <label class="settingsRow settingsVideoSoundLabel" for="settingsVideoSound"><span>Lyd til video (<span class="settingsVolume">0</span>%)</span>
+                            <input type="range" name="settingsVideoSound" id="settingsVideoSound" min="0" max="100" value="0">
                         </label>
                         <label class="settingsRow" for="settingsSortByKeywords">Vis nøgleords-sortering
                             <input type="checkbox" name="settingsSortByKeywords" id="settingsSortByKeywords" checked>

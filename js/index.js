@@ -13,17 +13,26 @@ modal(function(state) {
 });
 
 let settingsVideoSoundLabel = document.querySelector(".settingsVideoSoundLabel");
+let settingsVolume = settingsVideoSoundLabel.querySelector(".settingsVolume");
+let hero = document.querySelector(".hero");
+let heroVideo = hero.querySelector(".heroVideo");
+
 settingsPlayVideo.addEventListener("click", function() {
     settingsVideoSoundLabel.classList.toggle("js-disabled");
     settingsVideoSound.disabled = !this.checked;
 });
+settingsVideoSound.addEventListener("input", function() {
+    settingsVolume.textContent = this.value;
+    heroVideo.volume = this.value / 100;
+});
+
+heroVideo.volume = 0;
 
 function updateSettings() {
-    let hero = document.querySelector(".hero")
-    let heroVideo = hero.querySelector(".heroVideo")
+    let volume = settingsVideoSound.value;
     if (settingsPlayVideo.checked) {
         hero.classList.remove("js-hidden");
-        heroVideo.muted = !settingsVideoSound.checked;
+        heroVideo.volume = volume / 100;
         heroVideo.play();
     } else {
         hero.classList.add("js-hidden");
