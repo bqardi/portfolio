@@ -2,7 +2,7 @@
 
 .menu {
     --menu-link-color: hsl(0, 0%, 89%);
-    --menu-link-hover-color: hsl(207, 100%, 73%);
+    --menu-link-hover-color: hsl(207, 100%, 88%);
     --menu-padding: 30px;
     --menu-background-color: hsl(0, 0%, 25%);
     --menu-background-hover-color: hsl(207, 100%, 36%);
@@ -61,6 +61,7 @@
     align-items: center;
     justify-content: flex-end;
     width: 100%;
+    height: 100%;
 }
 
 .menu__link {
@@ -70,6 +71,7 @@
     color: var(--menu-link-color);
     text-decoration: none;
     padding: 0 1em;
+    height: 100%;
 }
 
 .menu__link:hover {
@@ -77,15 +79,8 @@
     text-decoration: underline;
 }
 
-.menu__link:hover .link__icon {
-    fill: var(--menu-link-hover-color);
-}
-
 .link__icon {
-    width: 1em;
-    height: 1em;
-    fill: var(--menu-link-color);
-    margin-right: 0.5em;
+    display: none;
 }
 
 
@@ -119,6 +114,7 @@
         left: 0;
         right: 0;
         max-width: 280px;
+        min-height: 200px;
         flex-direction: column;
         background-color: var(--menu-background-color);
     }
@@ -151,11 +147,17 @@
     }
     .menu__link:hover {
         text-decoration: none;
-        color: var(--menu-link-color);
         background-color: var(--menu-background-hover-color);
     }
-    .menu__link:hover .link__icon {
+    .link__icon {
+        display: unset;
+        width: 1em;
+        height: 1em;
         fill: var(--menu-link-color);
+        margin-right: 0.5em;
+    }
+    .menu__link:hover .link__icon {
+        fill: var(--menu-link-hover-color);
     }
     .menu__burger {
         display: flex;

@@ -107,7 +107,7 @@ function card() {
         imageSrc: "./images/star-wars-api.jpg",
         imagePlacement: "Center",
         title: "Star Wars API",
-        text: "Brug af fetch API'et til at hente et JSON objekt fra Star Wars API'et (<a class=\"card__link\" href=\"https://swapi.dev/\">https://swapi.dev/</a>) og manipulere DOM'en med disse data.<br><strong style=\"color:hsl(2, 82%, 40%);\">DER ER NOGET HELT GALT MED DENNE APP!!!</strong>",
+        text: "Brug af fetch API'et til at hente et JSON objekt fra Star Wars API'et (<a class=\"card__link\" href=\"https://swapi.dev/\">https://swapi.dev/</a>) og manipulere DOM'en med disse data.<br><strong style=\"color:hsl(2, 82%, 60%);\">DER ER NOGET HELT GALT MED DENNE APP!!!</strong>",
         gitHubLink: "https://github.com/bqardi/star-wars-api",
         siteLink: "https://bqardi.github.io/star-wars-api/",
         keyWords: ["GitHub", "Skole projekt"]
