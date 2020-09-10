@@ -4,20 +4,11 @@ import modal from "./modal.js";
 card();
 let menu = mainMenu();
 modal(function(state) {
-    switch (state) {
-        case "displayed":
-            menu.close();
-            break;
-        case "cancelled":
-            // Nothing!
-            // console.log("Cancelled");
-            break;
-        case "accepted":
-            updateSettings();
-            break;
-
-        default:
-            break;
+    if (state === "displayed") {
+        menu.close();
+    }
+    if (state === "accepted") {
+        updateSettings();
     }
 });
 
