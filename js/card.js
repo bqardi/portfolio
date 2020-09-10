@@ -133,13 +133,13 @@ function card() {
 
     let cardTemplate = document.getElementById("cardTemplate");
     let keyWordContainer = document.querySelector(".keyWordButtons");
-    let container = document.getElementById("cardContainer");
+    let cardContainer = document.getElementById("cardContainer");
 
     keyWords.push("Vis alle");
 
     cardDetails.forEach(cardDetail => {
         let clonedElement = cardTemplate.content.cloneNode(true);
-        createCard(container, clonedElement, cardDetail);
+        createCard(cardContainer, clonedElement, cardDetail);
         pushUnique(cardDetail.keyWords);
     });
 
@@ -172,13 +172,19 @@ function card() {
                 }
             });
         }
-    })
+    });
+
+    document.addEventListener("click", zoomCancel);
 
     function createCard(container, clonedElement, cardDetail) {
         let img = clonedElement.querySelector(".header__image");
         img.src = cardDetail.imageSrc;
         img.alt = cardDetail.title;
         img.classList.add("image" + cardDetail.imagePlacement);
+
+        let imgContainer = clonedElement.querySelector(".card__header");
+        imgContainer.addEventListener("mousemove", zoomMove);
+        imgContainer.addEventListener("click", zoomStart);
 
         clonedElement.querySelector(".content__title").textContent = cardDetail.title;
         clonedElement.querySelector(".content__text").innerHTML = cardDetail.text;
@@ -198,6 +204,7 @@ function card() {
         }
 
         cardDetail.element = clonedElement.querySelector(".card");
+
         container.appendChild(clonedElement);
     }
 
@@ -207,6 +214,83 @@ function card() {
                 keyWords.push(arrStr);
             }
         });
+    }
+
+    let img = null;
+    let imgContainer = null;
+    let timeout = null;
+    let transitionTime = 300;
+
+    function zoomStart(event) {
+        if (timeout) {
+            clearTimeout(timeout);
+        }
+        if (img) {
+            return;
+        }
+        if (event.target.classList.contains("card__header")) {
+            event.stopPropagation();
+            imgContainer = event.target;
+            img = imgContainer.querySelector(".header__image");
+            img.style.transform = `scale(2)`;
+
+            let mouse = zoomCoordinates(event);
+
+            if (!mouse) {
+                return;
+            }
+
+            img.style.left = `${mouse.x}px`;
+            img.style.top = `${mouse.y}px`;
+
+            imgContainer.style.cursor = "zoom-out";
+
+            img.style.transition = `all ${transitionTime}ms`;
+            setTimeout(() => {
+                img.style.transition = `transform ${transitionTime}ms`;
+            }, transitionTime);
+        }
+    }
+
+    function zoomMove(event) {
+        if (event.target.classList.contains("card__header")) {
+            if (event.target.querySelector(".header__image") != img) {
+                return;
+            }
+            let mouse = zoomCoordinates(event);
+
+            if (!mouse) {
+                return;
+            }
+
+            img.style.left = `${mouse.x}px`;
+            img.style.top = `${mouse.y}px`;
+        }
+    }
+
+    function zoomCancel(event) {
+        if (timeout) {
+            clearTimeout(timeout);
+        }
+        if (img) {
+            img.style.transform = `scale(1)`;
+            img.style.left = 0;
+            img.style.top = 0;
+            img.style.transition = `all 300ms`;
+            img = null;
+
+            imgContainer.removeAttribute("style");
+            imgContainer = null;
+        }
+    }
+
+    function zoomCoordinates(event) {
+        if (!img) {
+            return false;
+        }
+        let x = ((event.offsetX * -2 + img.offsetWidth) / 2) * 1.4;
+        let y = ((event.offsetY * -2 + img.offsetHeight) / 2) * 1.4;
+        return { x, y };
     }
 }
 

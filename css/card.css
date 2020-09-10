@@ -18,11 +18,12 @@
     display: flex;
     flex-direction: column;
     max-width: 512px;
+    filter: brightness(0.8);
     transition: filter 300ms;
 }
 
 .card:hover {
-    filter: brightness(1.3);
+    filter: brightness(1);
 }
 
 .card.js-hidden {
@@ -40,14 +41,19 @@
 }
 
 .card__header {
+    position: relative;
     overflow: hidden;
+    height: 256px;
+    cursor: zoom-in;
 }
 
 .header__image {
+    position: absolute;
     height: 100%;
-    max-height: 256px;
     width: 100%;
     object-fit: cover;
+    pointer-events: none;
+    transition: all 300ms;
 }
 
 .imageCenter {
@@ -63,6 +69,7 @@
     position: relative;
     bottom: 0;
     padding: 1em;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
 }
@@ -70,11 +77,12 @@
 .card__keyWords {
     color: hsl(0, 0%, 60%);
     font-size: 0.8em;
-    margin-bottom: 0.5em;
+    margin-bottom: 2em;
 }
 
 .card__separator {
-    color: red;
+    font-size: 1.3em;
+    color: var(--card-button-hover-background);
 }
 
 .content__title {
