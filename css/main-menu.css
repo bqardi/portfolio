@@ -44,7 +44,7 @@
 }
 
 .logo__image {
-    height: 50px;
+    height: 40px;
     margin-right: 20px;
 }
 
@@ -72,11 +72,24 @@
     text-decoration: none;
     padding: 0 1em;
     height: 100%;
+    min-width: 120px;
 }
 
 .menu__link:hover {
     color: var(--menu-link-hover-color);
-    text-decoration: underline;
+    background-color: hsl(200, 65%, 25%);
+}
+
+.menu__link:focus {
+    outline: none;
+    color: var(--menu-link-hover-color);
+    background-color: hsl(200, 65%, 40%);
+}
+
+.menu__link:active {
+    outline: none;
+    color: var(--menu-link-hover-color);
+    background-color: hsl(200, 65%, 60%);
 }
 
 .link__icon {
@@ -148,6 +161,10 @@
     .menu__link:hover {
         text-decoration: none;
         background-color: var(--menu-background-hover-color);
+    }
+    .menu__link:focus {
+        outline: none;
+        background-color: hsl(207, 100%, 26%);
     }
     .link__icon {
         display: unset;

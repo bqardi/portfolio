@@ -1,7 +1,10 @@
 @import "./main-menu.css";
 @import "./card.css";
+@import "./card-list.css";
 @import "./footer.css";
 @import "./modal.css";
+@import "./view.css";
+/* @import "./game.css"; */
 * {
     box-sizing: border-box;
     font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
@@ -9,7 +12,7 @@
 
 :root {
     --main-padding: 24px;
-    --header-height: 80px;
+    --header-height: 60px;
     --main-background-color: hsl(0, 0%, 15%);
     --main-maxwidth: 1400px;
 }
@@ -19,6 +22,7 @@ html {
 }
 
 body {
+    position: relative;
     background-color: var(--main-background-color);
     margin: var(--header-height) 0 0;
     overflow-x: hidden;
@@ -49,7 +53,7 @@ body {
 }
 
 .keyWords {
-    padding: 2em var(--main-padding) 3em;
+    padding: 2em var(--main-padding) 1em;
 }
 
 .keyWords.js-hidden {
@@ -78,24 +82,32 @@ body {
     border-bottom: var(--keyword-border-height) solid transparent;
     font-weight: 500;
     text-decoration: none;
-    color: hsl(0, 0%, 95%);
+    outline: none;
+    color: hsl(200, 40%, 90%);
     background-color: hsl(0, 0%, 20%);
     transition: background-color 150ms, color 150ms, border 150ms;
 }
 
 .keyWord:hover {
-    color: hsl(0, 0%, 80%);
-    background-color: hsl(2, 10%, 20%);
+    color: white;
+    background-color: hsl(200, 65%, 25%);
 }
 
 .keyWord.js-selected {
-    background-color: hsl(2, 10%, 20%);
-    border-bottom: var(--keyword-border-height) solid hsl(2, 82%, 40%);
+    background-color: hsl(200, 65%, 25%);
+    cursor: default;
 }
 
-.keyWord.js-selected:hover {
-    background-color: hsl(2, 30%, 20%);
-    border-bottom: var(--keyword-border-height) solid hsl(2, 82%, 30%);
+.keyWord:focus {
+    background-color: hsl(200, 65%, 40%);
+}
+
+.keyWord:active {
+    background-color: hsl(200, 65%, 70%);
+}
+
+.keyWord.js-selected:focus {
+    background-color: hsl(200, 65%, 40%);
 }
 
 .hero {
@@ -182,9 +194,8 @@ body {
 
 /* #region SETTINGS */
 
-.settingsForm {
+.settingsContainer {
     position: relative;
-    height: 100%;
 }
 
 .settingsRow {
@@ -193,8 +204,20 @@ body {
     padding: 0.75em var(--main-padding);
 }
 
+.settingsRow.js-active {
+    background-color: hsl(222, 20%, 15%);
+}
+
+.settingsRow.js-active:hover {
+    background-color: hsl(222, 20%, 18%);
+}
+
 .settingsRow:hover {
     background-color: hsl(0, 0%, 12%);
+}
+
+.settingsInput {
+    outline: none;
 }
 
 .settingsVideoSoundLabel.js-disabled {
@@ -215,7 +238,7 @@ body {
         padding: var(--main-padding) 0;
     }
     .keyWords {
-        padding: 0;
+        padding: 0 0 1em;
     }
     .keyWordButtons {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));

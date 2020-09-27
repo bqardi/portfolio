@@ -150,6 +150,23 @@
     fill: var(--card-button-github-hover-color);
 }
 
+.content__link:focus {
+    outline: none;
+    border: 2px solid hsl(0, 0%, 100%);
+}
+
+.content__link:first-child:focus {
+    outline: none;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-top-left-radius: var(--card-border-radius);
+}
+
+.content__link:last-child:focus {
+    outline: none;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-bottom-right-radius: var(--card-border-radius);
+}
+
 @media only screen and (max-width: 400px) {
     .card {
         border-radius: 0;

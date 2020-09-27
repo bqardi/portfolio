@@ -1,0 +1,30 @@
+.view {
+    width: 100%;
+    padding: 0 var(--main-padding);
+}
+
+.view__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.view__button {
+    width: 48px;
+    height: 48px;
+    margin-left: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view__icon {
+    width: 40px;
+    height: 40px;
+    fill: hsl(0, 0%, 95%);
+    transition: fill 300ms;
+}
+
+.view__button:hover .view__icon {
+    fill: hsl(200, 65%, 70%);
+}
