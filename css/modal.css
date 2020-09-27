@@ -30,6 +30,8 @@
 }
 
 .modal__window {
+    display: grid;
+    grid-template-rows: var(--modal-header-height) 1fr;
     width: 90vw;
     height: 90vh;
     max-width: 400px;
@@ -51,6 +53,11 @@
     background-color: hsl(2, 22%, 20%);
 }
 
+.modal__description {
+    margin: 0;
+    padding: var(--main-padding);
+}
+
 .modal__title {
     margin: 0;
     font-weight: 400;
@@ -70,6 +77,12 @@
     background-color: hsl(2, 82%, 45%);
 }
 
+.modal__close:focus {
+    outline: none;
+    border: 2px solid hsl(2, 22%, 90%);
+    border-top-right-radius: var(--modal-border-radius);
+}
+
 .modal__icon {
     width: 32px;
     height: 32px;
@@ -78,7 +91,6 @@
 
 .modal__content {
     font-weight: 300;
-    height: calc(100% - var(--modal-header-height));
 }
 
 .modal__links {
@@ -104,10 +116,16 @@
 }
 
 .modal__link:first-of-type {
-    border-radius: var(--main-padding) 0 0;
+    border-radius: var(--modal-border-radius) 0 0;
 }
 
 .modal__link:hover {
     color: hsl(0, 0%, 10%);
     background-color: hsl(130, 100%, 60%);
+}
+
+.modal__link:focus {
+    outline: none;
+    border: 2px solid hsl(130, 100%, 90%);
+    border-radius: var(--modal-border-radius) 0 var(--modal-border-radius);
 }

@@ -1,0 +1,63 @@
+.game {
+    --monster-height: 90px;
+    --monster-trail-height: 48px;
+    --monster-edge-height: 64px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.game__monsterContainer {
+    position: absolute;
+    left: -50%;
+    width: 0;
+    height: var(--monster-trail-height);
+    background-color: hsl(0, 0%, 15%);
+}
+
+.game__monster {
+    position: absolute;
+    z-index: 1;
+    top: calc((var(--monster-trail-height) - var(--monster-height)) / 2);
+    right: calc(var(--monster-height) / 2 * -1);
+    width: var(--monster-height);
+    height: var(--monster-height);
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.game__trail {
+    position: absolute;
+    top: 0;
+    left: -512px;
+    right: 0;
+    bottom: 0;
+}
+
+.game__trail::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: calc(var(--monster-edge-height) / 2 * -1);
+    display: block;
+    height: var(--monster-edge-height);
+    width: 100%;
+    background-image: url(/images/edge.svg);
+    background-repeat: repeat-x;
+}
+
+.game__trail::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: calc(var(--monster-edge-height) / 2 * -1);
+    display: block;
+    height: var(--monster-edge-height);
+    width: 100%;
+    background-image: url(/images/edge.svg);
+    background-repeat: repeat-x;
+}
