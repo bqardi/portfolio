@@ -1,5 +1,13 @@
 {
     "cards": [{
+        "imageSrc": "./images/hifi-corner.jpg",
+        "imagePlacement": "Center",
+        "title": "Hi-Fi Corner",
+        "text": "En stor gruppeopgave med 2 ugers varighed, hvor vi skulle lave en shop med sortering, filtrering og enkeltvisningsside (en side der viser det enkelte produkt). Alt sammen fetch'et fra et JSON objekt vi også selv skulle konstruere. Det hele foregik via GitHub - Projects, med issues, pull requests, reviews, merge conflicts, etc.",
+        "gitHubLink": "https://github.com/kings-n-queen/hifi-corner",
+        "siteLink": "https://kings-n-queen.github.io/hifi-corner/",
+        "keyWords": ["GitHub", "Skole projekt", "Gruppe projekt", "Mobil venlig"]
+    }, {
         "imageSrc": "./images/svg-icon-list.jpg",
         "imagePlacement": "Top",
         "title": "SVG icon list",

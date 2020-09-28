@@ -5,7 +5,7 @@ import modal from "./modal.js";
 
 let showAllCards;
 
-fetch("/data/cards.json")
+fetch("../data/cards.json")
     .then(function(response) {
         if (!response.ok) {
             console.log("Noget gik galt!");
