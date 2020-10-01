@@ -135,5 +135,13 @@
         "gitHubLink": "https://github.com/bqardi/digital-media-eksamen-pr-sentation",
         "siteLink": "https://bqardi.github.io/digital-media-eksamen-pr-sentation/",
         "keyWords": ["GitHub", "Skole projekt", "Mobil venlig"]
+    }, {
+        "imageSrc": "./images/solitaire-klondike.jpg",
+        "imagePlacement": "Top",
+        "title": "7-Kabale",
+        "text": "En 7-kabale test jeg lavede i forbindelse med mit card-API (<a class=\"card__link\" href=\"https://github.com/bqardi/cards/\">https://github.com/bqardi/cards/</a>).",
+        "gitHubLink": "https://github.com/bqardi/klondike-solitaire",
+        "siteLink": "https://bqardi.github.io/klondike-solitaire/",
+        "keyWords": ["GitHub", "Skole projekt", "Mobil venlig", "Spil", "Sjov"]
     }]
 }
