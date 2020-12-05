@@ -231,11 +231,22 @@ body {
 
 /* #endregion SETTINGS */
 
+@media only screen and (max-width: 720px) {
+    .hero__description {
+        position: unset;
+        margin: 1em 0;
+        background-color: unset;
+    }
+    .mainScrollTo {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 430px) {
     .grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        grid-template-columns: repeat(auto-fit, minmax(287px, auto));
         gap: 2em 0;
-        padding: var(--main-padding) 0;
+        padding: var(--main-padding) 0.5em;
     }
     .keyWords {
         padding: 0 0 1em;
